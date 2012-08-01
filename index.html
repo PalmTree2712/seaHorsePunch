@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Multiplication Tables</title>
+	<!-- Normalize -->
+	<script src="https://github.com/necolas/normalize.css.git"></script>
+	<!-- jQuery Mobile -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+	<!-- Personal Files -->
+	<link type="text/css" rel="stylesheet" href="mathApp.css">
+	<script src="mathApp.js"></script>
+</head>
+<body>
+
+
+
+<div id="start" data-role="page">
+	<div data-role="header">
+		<h1>Marissa Math</h1>
+	</div>
+	<div data-role="content">
+		<div id="timesContainer">
+			<fieldset data-role="controlgroup" data-type="horizontal">
+				<legend>Choose Your Quiz:</legend>
+				
+				<input type="radio" name="radio-choice" data-theme="b" id="timesAll" value="all"  />
+				<label id="timesAllLabel" for="timesAll">All</label>
+			</fieldset>
+			<fieldset data-role="controlgroup" data-type="horizontal">
+				<input type="radio" name="radio-choice" data-theme="b" id="times1" value="1" checked="checked" />
+				<label for="times1">1's</label>
+	
+				<input type="radio" name="radio-choice" data-theme="b" id="times2" value="2"  />
+				<label for="times2">2's</label>
+			
+				<input type="radio" name="radio-choice" data-theme="b" id="times3" value="3"  />
+				<label for="times3">3's</label>
+			</fieldset>
+			<fieldset data-role="controlgroup" data-type="horizontal">
+				<input type="radio" name="radio-choice" data-theme="b" id="times4" value="4"  />
+				<label for="times4">4's</label>
+				
+				<input type="radio" name="radio-choice" data-theme="b" id="times5" value="5" checked="checked" />
+				<label for="times5">5's</label>
+			
+				<input type="radio" name="radio-choice" data-theme="b" id="times6" value="6"  />
+				<label for="times6">6's</label>
+			</fieldset>
+			<fieldset data-role="controlgroup" data-type="horizontal">
+				<input type="radio" name="radio-choice" data-theme="b" id="times7" value="7"  />
+				<label for="times7">7's</label>
+	
+				<input type="radio" name="radio-choice" data-theme="b" id="times8" value="8"  />
+				<label for="times8">8's</label>
+			
+				<input type="radio" name="radio-choice" data-theme="b" id="times9" value="9"  />
+				<label for="times9">9's</label>
+			</fieldset>
+			<fieldset data-role="controlgroup" data-type="horizontal">		
+				<input type="radio" name="radio-choice" data-theme="b" id="times10" value="10" checked="checked" />
+				<label for="times10">10's</label>
+	
+				<input type="radio" name="radio-choice" data-theme="b" id="times11" value="11"  />
+				<label for="times11">11's</label>
+	
+				<input type="radio" name="radio-choice" data-theme="b" id="times12" value="12"  />
+				<label for="times12">12's</label>
+			</fieldset>
+		</div>
+				
+		<a href="#" id="startButton" data-role="button" data-theme="e" onclick="startQuiz">Start</a>
+	</div>
+</div>
+
+
+<div id="quiz" data-role="page">
+	<div data-role="header">
+		<h1>Marissa Math</h1>
+	</div>
+	<div data-role="content">
+		<div class="ui-grid-a">
+			<div class="ui-block-a">
+				<p id="problem">
+					<span id="numberA"></span> x <span id="numberB"></span> = 	
+				</p>
+			</div>
+			<div class="ui-block-b">
+				<div id="answerSide">
+					<input type="tel" id="answer" onblur="showAnswer();" />
+				</div>
+			</div>
+		</div>
+		<div id="grade"></div>
+		<div id="solveDiv">
+			<a id="solve" href="#" data-role="button" data-theme="b" onclick="showAnswer();">Answer</a>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
